@@ -1,0 +1,5 @@
+#menubutton, #realtime, #ticker, #menu, #buttons, body{
+transition: all 1s ease-in-out;}
+
+#menubutton, #realtime, #ticker, #menu, #buttons, body{
+-moz-transform: rotate3d(0,0,0, 0deg);}

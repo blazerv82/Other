@@ -1,0 +1,9 @@
+This is a test to see if the loading in a text file is working.
+
+If you can see
+This at all, along
+With all it's formatting it's working correctly.
+
+Congratulations. Now write the rest of the game.
+
+EDIT: Ok, so you managed to find me in another folder. Good job. Seriously though, get to work.

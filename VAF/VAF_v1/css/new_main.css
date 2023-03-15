@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 200, 0);
+    color: rgb(255, 255, 255);
+
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+
+    background-image: url("../img/land.png");
+
+    padding: 1em;
+}
+
+/* Card */
+.card-deck {
+    margin: 10px 10px;
+}
+
+.card {
+    background-image: url("../img/land.png");
+    background-color: rgb(0, 100, 0);
+    color: rgb(255, 255, 255);
+
+    border-style: dashed;
+    border-color: rgb(180, 75, 30);
+    border-width: 5px;
+    border-radius: 0px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(99, 29, 139);
+}
+
+.nav-item, .nav-link, .navbar-brand {
+    color: rgb(255, 255, 255);
+}
+
+.nav-item:hover, .nav-link:hover, .navbar-brand:hover{
+    color: rgb(190, 190, 190);
+}
+
+#world_container{
+    background-color: rgb(255, 255, 255);
+}
+
+.info {
+    white-space: pre-line;
+}
+
+#llama_name {
+    font-size: 1.5em;
+}
+
+/* 
+#llama_img {
+    animation-name: llama_walk;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;   
+}
+
+@keyframes llama_walk {
+    0% {
+        margin-left: 0%;
+       
+    }
+
+    100% {
+        margin-left: 90%;
+        
+    }
+} */
+
+#llama_hunger_bar, #llama_happiness_bar {
+    background-color: rgb(0, 100, 0);
+    padding: 0.25em;
+    border-radius: 1em;
+}

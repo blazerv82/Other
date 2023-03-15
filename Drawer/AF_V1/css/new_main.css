@@ -1,0 +1,24 @@
+/* Basics */
+body{
+    font-family: Calibri, Arial, sans-serif;
+    background-color: rgb(240, 240, 240);
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+}
+
+/* Card */
+.card {
+    background-color: rgb(70, 70, 70);
+    color: rgb(255, 255, 255);
+    border-radius: 0px;
+    border-style: none;
+}
+
+/* Navbar */
+.nav-item, .nav-link, .navbar-brand {
+    color: rgb(255, 255, 255);
+}
+
+.nav-item:hover, .nav-link:hover, .navbar-brand:hover{
+    color: rgb(190, 190, 190);
+}

@@ -1,0 +1,5 @@
+#news, #realtime, #ticker, #menu, #buttons, table, body{
+transition: all 1s ease-in-out;}
+
+#news, #realtime, #ticker, #menu, #buttons,table, body{
+-moz-transform: rotate3d(0,0,0, 0deg);}

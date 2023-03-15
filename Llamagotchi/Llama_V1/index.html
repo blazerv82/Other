@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+    <title>Llamagotchi</title>
+
+    <meta charset="utf-8">
+
+    <link rel="icon" href="img/favicon.png" >
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                
+                <div class="card-header">
+                    <img id="llama_img" src="img/llama.png">
+                </div>
+
+                <div class="card-body">
+                    
+                    <div id="llama_name"></div>
+                    <div id="llama_info"></div>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-2">
+                            <button type="button" class="btn" id="llama_feed_btn">FEED</button>
+                        </div>
+                        <div class="col-10">
+                            <div id="llama_hunger_bar"></div>
+                        </div>
+                    </div>
+                    
+                    <br>
+
+                    <div class="row">
+                        <div class="col-2">
+                            <button type="button" class="btn" id="llama_play_btn">PLAY</button>
+                        </div>
+                        <div class="col-10">
+                            <div id="llama_play_bar"></div>
+                        </div>
+                    </div>
+
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/llama.js"></script>
+<script src="js/init.js"></script>
+
+<script src="js/backend/jquery.js"></script>
+<script src="js/backend/popper.js"></script>
+<script src="js/backend/bootstrap.js"></script>
+<script src="js/backend/anime.min.js"></script>
+
+</body>
+</html>

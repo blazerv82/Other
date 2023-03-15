@@ -1,0 +1,101 @@
+/* Music CSS V2 */
+
+/* Album Art */
+
+.grid_wrapper{
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-evenly;
+}
+
+.album_info_wrapper{
+    display: flex;
+    flex-flow: column wrap;
+    
+    margin-bottom: 25px;
+}
+
+
+.album{
+    width: 300px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.setlist{
+    background-color: rgba(10, 10, 10, .95);
+    border-bottom: 5px solid rgb(0, 255, 225);
+
+    width: 300px;
+
+    padding: 10px;
+    padding-bottom: 15px;
+    
+    text-align: left;
+    word-wrap: break-word;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+
+
+/* Music Player */
+
+#player_containter{
+    display: block;
+    position: fixed;
+
+    background-color: rgba(0, 255, 225, 0.75);
+    
+    width: 75%;
+    height: 50px;
+    bottom: 0px;
+}
+
+
+
+/* Player Controls */
+
+#player_playPause{
+    float: left;
+    margin-top: 7px;
+    margin-left: 10px;
+    height: 35px;
+    width: 35px;
+    background: url("../img/music_player/playPause.png") no-repeat;
+    border: 0;
+}
+
+#gohome{
+    float: right;
+    margin-top: 7px;
+    margin-right: 10px;
+    height: 35px;
+    width: 35px;
+    
+    border: 0;
+}
+
+#player_progress_bar{
+    float: left;
+    
+    width: 250px;
+	height: 25px;
+    
+    background: rgba(0, 150, 125, 1);
+    
+    margin-top: 13px;
+    margin-left: 5px;
+
+    border-radius: 15px;
+}
+
+#player_progress_pos{
+    width: 25px;
+
+	background: rgb(0, 0, 0);
+    
+    border-radius: 100%;
+}

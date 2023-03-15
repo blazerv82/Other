@@ -1,0 +1,229 @@
+/*Main*/
+body{
+font-size: 14px;
+font-family: Calibri, Arial, sans-serif;
+background-color: #101010;
+text-align: center;
+color: #FFFFFF;
+background: url('../pictures/background/snewnotext.png') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;}
+
+/*Spans Left*/
+#menu{
+width: 300px;
+z-index: 4;
+padding: 7px 7px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+background-color: #AFBCD1;
+display: block;
+position: absolute;
+box-shadow: 0px 2px 5px #000000;
+left: 10px;
+}
+
+#ticker{
+z-index: 3;
+width: 300px;
+display: block;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+color: #FFFFFF;
+text-decoration: none;
+background-color: #5577CC;
+box-shadow: 0px 2px 5px #000000;
+padding: 7px 7px;
+top: 40px;
+left: 10px;
+}
+
+#realtime{
+z-index: 2;
+width: 300px;
+padding: 7px 7px;
+display: block;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+color: #FFFFFF;
+text-decoration: none;
+background-color: #AB9CCE;
+box-shadow: 0px 2px 5px #000000;
+top: 100px;
+left: 10px;
+}
+
+/*Spans Right*/
+#imgheader{
+z-index: 2;
+padding: 7px 7px;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+color: #FFFFFF;
+text-decoration: none;
+background-color: #FFD68C;
+box-shadow: 0px 2px 5px #000000;
+right: 10px;
+}
+
+#menubutton{
+background-color: #C2A3B7;
+padding: 7px 7px;
+display: block;
+position: absolute;
+width: 300px;
+margin-left: auto;
+margin-right: auto;
+top: 375px;
+right: 10px;
+box-shadow: 0px 2px 5px #000000;
+}
+
+/*Spans Middle*/
+#blog{
+z-index: 4;
+width: 300px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+width: 650px;
+height: 550px;
+color: #FFFFFF;
+text-decoration: none;
+background-color: #A7FF87;
+box-shadow: 0px 2px 5px #000000;
+padding: 7px 7px;
+border: 0;
+}
+
+/*links*/
+a#menu, a{
+color: #FFFFFF;
+text-decoration: none;}
+
+
+a.link{
+position: block;
+padding: 5px;
+color: #FFFFFF;
+text-decoration: none;}
+
+a.link:hover, a:hover{
+color: #AAAAAA;}
+
+
+/*Imagelink*/
+#imglink{
+margin: 5px;
+padding: 2px;
+box-shadow: 0px 2px 5px #000000;
+}
+
+#imglink:hover{
+background-color: #AAFFCC;}
+
+
+/*Tooltip*/
+#tooltip{
+position: relative;
+}
+  
+#tooltip span{
+margin-left: -999em;
+position: absolute;
+}
+  
+#tooltip:hover span{ 
+font-family: Calibri, Tahoma, Geneva, sans-serif;
+position: absolute;
+z-index: 99;
+margin-left: 0;
+width: 250px;
+}
+
+#normal{
+color: #000000;
+background-color: #F2F2F2;
+border: solid 1px #969696;
+padding: 10px;
+box-shadow: 0px 0px 5px #D3D3D3;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+#mirror{
+left: -276px;
+color: #000000;
+background-color: #F2F2F2;
+border: solid 1px #969696;
+padding: 10px;
+box-shadow: 0px 0px 5px #D3D3D3;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+#buttons{
+z-index: 3;
+width: 300px;
+padding: 7px 7px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+color: #FFFFFF;
+text-decoration: none;
+background-color: #404040;
+box-shadow: 0px 2px 5px #000000;
+padding: 7px 7px;
+}
+
+
+table{
+width: 750px;
+margin-left: auto;
+margin-right: auto;
+}
+/*Older/Other styles
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+.innerlink{
+color: #FFFFFF;
+text-decoration: none;}
+
+
+
+#important{
+width: 300px;
+z-index: 5;
+padding: 7px 7px;
+margin-left: auto;
+margin-right: auto;
+background-color: #8ADB57;
+display: block;
+position: absolute;
+box-shadow: 0px 2px 5px #000000;
+font-size: 16px;
+text-transform: uppercase;
+padding: 5px;
+color: #FFFFFF;}
+
+/*Cover background
+background: url('../pictures/background/dark2.jpg') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;}
+*/

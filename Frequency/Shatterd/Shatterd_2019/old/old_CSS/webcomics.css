@@ -1,0 +1,58 @@
+body{
+font-family: Calibri, Arial, sans-serif;
+font-size: 14px;
+background-color: #ABABAB;
+text-align: center;
+color: #FFFFFF;
+background: url('../pictures/background/carbonfiber.png') repeat;
+}
+
+#title{
+width: 300px;
+margin-left: auto;
+margin-right: auto;
+padding: 7px 7px;
+display: block;
+background-color: #64C832;
+font-size: 16px;
+box-shadow: 0px 2px 5px #000000;}
+
+#menu{
+width: 300px;
+z-index: 4;
+padding: 7px 7px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+background-color:  rgba(0, 255, 0, 0.25);
+display: block;
+}
+
+
+/*Imagelink*/
+#imglink{
+margin: 5px;
+padding: 3px;
+box-shadow: 0px 2px 5px #000000;
+border-bottom-right-radius: 15px;
+border-top-left-radius: 15px;
+}
+
+#imglink:hover{
+background-color:  rgba(0, 255, 0, 0.25);
+}
+
+a.link{
+position: block;
+padding: 5px;
+color: #FFFFFF;
+text-decoration: none;}
+
+a.link:hover{
+color: #AAAAAA;}
+
+
+/*
+background-image: url('../pictures/background/top.png');
+background-repeat: repeat-x;
+*/

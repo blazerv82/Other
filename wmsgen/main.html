@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Wonder Mail S Generator</title>
+
+<link rel="stylesheet" type="text/css" href="../css/wondermail.css">
+
+<script type="text/javascript" src="wmutils.js"></script>
+<script type="text/javascript" src="wm.js"></script>
+<script type="text/javascript" src="wmgen.js"></script>
+<script type="text/javascript" src="dungeon.js"></script>
+<script type="text/javascript" src="items.js"></script>
+<script type="text/javascript" src="pokes.js"></script>
+</head>
+<body onload="runOnLoad()">
+
+<script type="text/javascript">
+		/**
+		 * The purpose of this function is to properly initialize the generator.
+		 * It will run on load by default unless the user is using IE6.
+		 */
+		function runInitialize() {
+			WMSGen.advanced = (document.location.search.indexOf('advanced') != -1);
+			WMSGen.setup($('genForm'));
+		}
+		
+		// Run initialize by default.
+		runOnLoad = runInitialize;
+		
+		// This is used in wm.js.
+		function getOption(name) {
+			switch(name) {
+				default:
+					return false;
+				break;
+			}
+		}
+		
+		// Don't allow option setting on this page.
+		function setOption(name, value) {
+			return false;
+		}
+		
+		var generatedThisSession = false;
+		function doGenerate() {
+			// Check for errors
+			var errors = WMSGen.verify();
+			if(errors.length == 0) {
+				var code = WMSGen.generate();
+				$('outputbox').value = code;
+				
+				// See how many people are actually using this thing...
+				if(typeof(_gaq) != 'undefined' && !generatedThisSession && (navigator.onLine || typeof(navigator.onLine) != 'boolean')) {
+					if(typeof(_gaq.push) != 'undefined') {
+						_gaq.push(['_trackPageview', "/wms/generator/generated"]);
+						generatedThisSession = true;
+					}
+				}
+			}
+			else {
+				var errorStr = "";
+				for(var i = 0; i < errors.length; ++i) {
+					errorStr += " * " + errors[i] + "\n";
+				}
+				$('outputbox').value = errorStr;
+			}
+		}
+		</script>
+</script>
+<form id="genForm">
+<table>
+<tr>
+	<td><label for="missionTypeBox">Mission type:</label></td>
+	<td><select name="missionTypeBox" id="missionTypeBox" onchange="WMSGen.fillSubTypeList(); WMSGen.update()"></select></td>
+	<td><span id="subType" style="display: none"><select name="missionSubTypeBox" id="missionSubTypeBox" onchange="WMSGen.update()"></select></span></td>
+</tr>
+
+<tr>
+	<td><label for="dungeonBox">Dungeon:</label></td>
+	<td colspan="2"><select id="dungeonBox" name="dungeonBox"></select></td>
+</tr>
+
+<tr>
+	<td><label for="floor">Floor:</label></td>
+	<td colspan="2"><input id="floor" name="floor" type="text" size="4" value="1"></td>
+</tr>
+
+<tr>
+	<td><label for="clientBox">Client:</label></td>
+	<td><select name="clientBox" id="clientBox"></select></td>
+	<td>female: <input type="checkbox" name="clientF" id="clientF" value="600"></td>
+</tr>
+
+<tr>
+	<td><label for="targetBox">Target:</label></td>
+	<td><select name="targetBox" id="targetBox"></select></td>
+	<td>female: <input type="checkbox" name="targetF" id="targetF" value="600"></td>
+</tr>
+
+<tr id="target2">
+	<td><label for="target2Box">Extra target:</label></td>
+	<td colspan="2"><select name="target2Box" id="target2Box"></select> female: <input type="checkbox" name="target2F" id="target2F" value="600"></td>
+</tr>
+
+<tr>
+	<td><label for="targetItemBox">Target item:</label></td>
+	<td colspan="2"><select name="targetItemBox" id="targetItemBox"></select></td>
+</tr>
+
+<tr>
+	<td><label for="rewardTypeBox">Reward type:</label></td>
+	<td colspan="2">
+		<select name="rewardTypeBox" id="rewardTypeBox" onchange="WMSGen.update()">
+			<option value="0">Cash</option>
+			<option value="1">Cash + ??? (Reward item)</option>
+			<option value="2">Item</option>
+			<option value="3" selected="selected">Item + ??? (Random)</option>
+			<option value="4">??? (Reward item)</option>
+			<option value="5">??? (Egg)</option>
+			<option value="6">??? (Client joins)</option>
+		</select>
+	</td>
+</tr>
+
+<tr>
+	<td><label for="rewardItemBox">Reward item:</label></td>
+	<td colspan="2"><select name="rewardItemBox" id="rewardItemBox"></select></td>
+</tr>
+
+<div id="advancedModeOnlyStuff">
+<tr>
+	<td><label for="flavorText">Flavor text:</label></td>
+	<td colspan="2"><input id="flavorText" name="flavorText" type="text" value=""> (leave empty for auto)</td>
+</tr>
+
+<tr>
+	<td><label for="specialFloor">Special floor:</label></td>
+	<td colspan="2"><input id="specialFloor" name="specialFloor" type="text" value=""> (leave empty for auto; overrides even forced special floors!)</td>
+</tr>
+</div>
+
+<tr>
+	<td><label for="useEUswap">European version:</label></td>
+	<td colspan="2"><input type="checkbox" name="useEUswap" id="useEUswap" value="1"> (check this to make codes for the european version)</td>
+</tr>
+
+<tr>
+	<td><label for="generateBtn">Generate:</label></td>
+	<td colspan="2"><button id="generateBtn" type="button" onclick="doGenerate(); return false">Generate</button></td>
+</tr>
+
+<tr>
+	<td colspan="3"><textarea id="outputbox" rows="3" cols="60" readonly="readonly"></textarea></td>
+</tr>
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,217 @@
+/*Main*/
+body{
+font-size: 12px;
+font-family: Calibri, Arial, sans-serif;
+background: url('../pictures/background/gradient1.png') repeat-x;
+background-color: #C0C0C0;
+text-align: center;
+color: #000000;
+}
+
+@font-face{
+font-family: Mine;
+src: ('old/Minecraftia.ttf');
+}
+
+/* Main Spans */
+#content{
+background-color:  rgba(150, 150, 150, 0.15);
+box-shadow: 0px 2px 5px #000000;
+width: 600px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding-bottom: 20px;
+}
+
+#navmenu{
+background-color:  rgba(0, 0, 0, 0.1);
+display: block;
+width: 300px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+padding: 7px 7px;
+}
+
+#disclaimer{
+background-color:  rgba(0, 0, 0, 0.1);
+display: block;
+width: 450px;
+text-align: left;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+padding: 7px 7px;
+}
+
+#siteStats{
+background-color:  rgba(0, 0, 0, 0.1);
+display: block;
+width: 450px;
+text-align: left;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+padding: 7px 7px;
+}
+
+#construction{
+font-size: 24px;
+background-color:  rgba(0, 0, 0, 0.1);
+display: block;
+width: 450px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+padding: 7px 7px;
+}
+
+/*links*/
+a#navmenu, a{
+color: #FFFFFF;
+text-decoration: none;}
+
+
+a.link{
+position: block;
+padding: 5px;
+color: #000000;
+text-decoration: none;}
+
+a.link:hover, a:hover{
+color: #AAAAAA;}
+
+
+/* Images */
+#picture{
+padding-bottom: 25px;
+}
+
+#picturelink{
+
+}
+
+/* Text */
+#infotext{
+font-size: 12px;
+background-color:  rgba(0, 0, 0, 0.1);
+display: block;
+width: 250px;
+margin-left: auto;
+margin-right: auto;
+padding: 7px 7px;
+}
+
+#sadface{
+font-size: 64px;
+font-family: Code2000;
+}
+
+hr{
+color: #000000;
+width: 75%;
+}
+
+/*Tooltip*/
+#tooltip{
+position: relative;
+}
+  
+#tooltip span{
+margin-left: -999em;
+position: absolute;
+}
+  
+#tooltip:hover span{ 
+font-family: Calibri, Tahoma, Geneva, sans-serif;
+position: absolute;
+z-index: 99;
+margin-left: 0;
+width: 250px;
+}
+
+#normal{
+color: #000000;
+background-color: rgba(255, 255, 255, 0.75);
+border: solid 1px #969696;
+padding: 10px;
+box-shadow: 0px 0px 5px #D3D3D3;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+#mirror{
+left: -276px;
+color: #000000;
+background-color: rgba(255, 255, 255, 0.75);
+border: solid 1px #969696;
+padding: 10px;
+box-shadow: 0px 0px 5px #D3D3D3;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+#buttons{
+z-index: 3;
+width: 300px;
+padding: 7px 7px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+color: #FFFFFF;
+text-decoration: none;
+background-color: rgba(150, 150, 150, 0.75);
+box-shadow: 0px 2px 5px #000000;
+padding: 7px 7px;
+}
+/*Older/Other styles
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+.innerlink{
+color: #FFFFFF;
+text-decoration: none;}
+
+#buttons{
+z-index: 3;
+width: 300px;
+padding: 7px 7px;
+display: block;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+color: #FFFFFF;
+text-decoration: none;
+background-color: #404040;
+box-shadow: 0px 2px 5px #000000;
+padding: 7px 7px;
+}
+
+#important{
+width: 300px;
+z-index: 5;
+padding: 7px 7px;
+margin-left: auto;
+margin-right: auto;
+background-color: #8ADB57;
+display: block;
+position: absolute;
+box-shadow: 0px 2px 5px #000000;
+font-size: 16px;
+text-transform: uppercase;
+padding: 5px;
+color: #FFFFFF;}
+
+/*Cover background
+background: url('../pictures/background/dark2.jpg') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;}
+*/

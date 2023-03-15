@@ -1,0 +1,65 @@
+/*
+CSS for F3 website
+Main CSS
+
+As created by blazerv82/Snake 2013+
+
+
+*/
+
+/*Main*/
+body{
+font-size: 14px;
+font-family: Calibri, Arial, sans-serif;
+background: url('../pictures/bgtext.png') ; 
+background-color: #FFFFFF;
+color: #FFFFFF;}
+
+/*Logo Image*/
+#mainimage{
+position: absolute;
+right: 10px;
+padding: 2px;
+}
+
+/*Spans*/
+#menu{
+width: 150px;
+z-index: 4;
+padding: 7px 7px;
+margin-bottom: 5px;
+background-color:  rgba(100, 200, 50, 0.75);
+display: block;
+position: absolute;
+box-shadow: 0px 2px 5px #000000;
+right: 10px;
+top: 175px;
+text-align: center;
+}
+
+#text{
+width: 400px;
+z-index: 4;
+padding: 7px 7px;
+margin-bottom: 5px;
+background-color:  rgba(100, 200, 50, 0.75);
+display: block;
+position: absolute;
+box-shadow: 0px 2px 5px #000000;
+right: 10px;
+text-align: left;
+}
+
+/*Links*/
+a#menu, a{
+color: #FFFFFF;
+text-decoration: none;}
+
+a.link{
+position: block;
+padding: 5px;
+color: #FFFFFF;
+text-decoration: none;}
+
+a.link:hover, a:hover{
+color: #DDDDDD;}

@@ -1,0 +1,119 @@
+/*========
+Main CSS for BETAC
+created June 2013 by bv
+=========*/
+
+@font-face {
+    font-family: Mecha;
+    src: url('../fonts/mecha.ttf');
+}
+
+/* Main */
+
+body {
+    background-color: #CC0000;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #EEEEEE;
+}
+
+
+#news {
+    color: #FFFFFF;
+    background-color:  rgba(0, 0, 0, 0.3);
+    padding: 7px;
+    padding-bottom: 15px;
+    display: block;
+    width: 700px;
+    margin-bottom: 10px;
+}
+
+#newsheader {
+    padding: 7px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #FFAA99;
+    margin-bottom: 5px;
+}
+
+
+/* Middle */
+#navmenu {
+    background-color:  rgba(0, 0, 0, 0.3);
+    padding: 7px;
+    padding-bottom: 15px;
+    display: block;
+    width: 150px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* Bottom */
+.idtext {
+    background-color:  rgba(0, 0, 0, 0.5);
+    padding: 7px;
+    padding-bottom: 15px;
+    display: block;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 700px;
+    font-size: 12px;
+}
+
+/* Game */
+
+#game {
+    background-image: url('../pics/game/background.png'); 
+    display: block;
+    width: 1000px;
+    height: 550px;
+}
+
+#leftpanel {
+    background-color:  rgba(0, 0, 0, 0.3);
+    width: 200px;
+    height: 450px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#text {
+    background-color:  rgba(0, 0, 0, 0.3);
+    width: 751px;
+    height: 450px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+textarea {
+    color: #FFFFFF;
+    font-family: Mecha, Calibri;
+    border: none;
+    background-color:  rgba(0, 0, 0, 0.5);
+    width: 730px;
+    height: 430px;
+    resize: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+#buttons{
+    background-color:  rgba(0, 0, 0, 0.3);
+    width: 980px;
+    display: inline-block;
+}

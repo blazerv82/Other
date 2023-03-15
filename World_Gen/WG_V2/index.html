@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>World Generator V2</title>
+
+    <meta charset="utf-8">
+
+    <link rel="icon" href="img/favicon.png" >
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/new_main.css">
+
+    <script type="text/javascript" src="js/world_gen.js"></script>
+
+</head>
+
+<body>
+    
+    <button class="btn btn-dark" onclick="generate_world()">
+        <i class="fas fa-globe align-middle" style="font-size:25px; margin-right: 5px;"></i>
+        <span>GENERATE</span>
+    </button>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#stats_modal">
+        <i class="far fa-chart-bar align-middle" style="font-size:25px; margin-right: 5px;"></i>
+        <span>STATS</span>
+    </button>
+  
+  <!-- Modal -->
+    <div class="modal fade" id="stats_modal" tabindex="-1" role="dialog" aria-labelledby="stats_modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="stats_modal_label">WORLD BREAKDOWN</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <div class="modal-body">
+                <div id="stats_div"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#var_modal">
+        <i class="fas fa-cog align-middle" style="font-size:25px; margin-right: 5px;"></i>
+        <span>SETTINGS</span>
+    </button>
+  
+  <!-- Modal -->
+    <div class="modal fade" id="var_modal" tabindex="-1" role="dialog" aria-labelledby="var_modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="var_modal_label">WORLD GENERATOR SETTINGS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <div class="modal-body">
+
+                <form>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="form_size_label">Tile Size</span>
+                        </div>
+                        
+                        <input type="text" class="form-control" name="form_size" id="form_size" aria-label="form_size" aria-describedby="form_size" value="35" required>
+
+                        <div class="input-group-append">
+                                <span class="input-group-text" id="form_size_label">px</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="water_density_label">Water Density</span>
+                            </div>
+                            
+                            <input type="text" class="form-control" name="water_density" id="water_density" aria-label="water_density" aria-describedby="water_density" value="25" required>
+    
+                            <div class="input-group-append">
+                                    <span class="input-group-text" id="water_density_label">%</span>
+                            </div>
+
+                            
+                    </div>
+
+                    <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="city_density_label">City Density</span>
+                            </div>
+                            
+                            <input type="text" class="form-control" name="city_density" id="city_density" aria-label="city_density" aria-describedby="city_density" value="1" required>
+    
+                            <div class="input-group-append">
+                                    <span class="input-group-text" id="city_density_label">%</span>
+                            </div>
+                            
+                            
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="lake_density_label">Lake Density</span>
+                        </div>
+                                
+                        <input type="text" class="form-control" name="lake_density" id="lake_density" aria-label="lake_density" aria-describedby="lake_density" value="0" required>
+        
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="lake_density_label">%</span>
+                        </div>    
+                    </div>
+
+                    <hr>
+
+                    <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="hl_density_label">Hot Land Density</span>
+                            </div>
+                                    
+                            <input type="text" class="form-control" name="hl_density" id="hl_density" aria-label="hl_density" aria-describedby="hl_density" value="50" required>
+            
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="hl_density_label">%</span>
+                            </div>    
+                    </div>
+
+                    <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="hl_start_label">Hot Land Start</span>
+                            </div>
+                                    
+                            <input type="text" class="form-control" name="hl_start" id="hl_start" aria-label="hl_start" aria-describedby="hl_start" value="30" required>
+            
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="hl_start_label">%</span>
+                            </div>    
+                    </div>
+
+                    <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="hl_end_label">Hot Land End</span>
+                            </div>
+                                    
+                            <input type="text" class="form-control" name="hl_end" id="hl_end" aria-label="hl_end" aria-describedby="hl_end" value="60" required>
+            
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="hl_end_label">%</span>
+                            </div>    
+                    </div>
+
+                    <hr>
+
+                    <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="cl_density_label">Cold Land Density</span>
+                            </div>
+                                    
+                            <input type="text" class="form-control" name="cl_density" id="cl_density" aria-label="cl_density" aria-describedby="cl_density" value="25" required>
+            
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="cl_density_label">%</span>
+                            </div>    
+                    </div>
+
+                    <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="cl_start_label">Cold Land Top</span>
+                            </div>
+                                    
+                            <input type="text" class="form-control" name="cl_start" id="cl_start" aria-label="cl_start" aria-describedby="cl_start" value="15" required>
+            
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="cl_start_label">%</span>
+                            </div>    
+                    </div>
+
+                    <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="cl_end_label">Cold Land Bottom</span>
+                            </div>
+                                    
+                            <input type="text" class="form-control" name="cl_end" id="cl_end" aria-label="cl_end" aria-describedby="cl_end" value="80" required>
+            
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="cl_end_label">%</span>
+                            </div>    
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <canvas id="world_container" height="525" width="525"></canvas>
+
+    <footer>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </footer>
+
+</body>
+
+</html>

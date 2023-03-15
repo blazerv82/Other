@@ -1,0 +1,20 @@
+body{
+font-size: 14px;
+font-family: Arial;
+background-color: #101010;
+color: #FFFFFF;
+background: url('../pictures/background/dark2.jpg') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;}
+
+table, tr, td{
+padding: 5px;}
+
+textarea{
+width: 500px;
+resize: none;}
+
+#missionTypeBox, #missionSubTypeBox, #dungeonBox, #floor, #targetBox{
+width: 150px;}

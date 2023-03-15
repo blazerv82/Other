@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<!-- 
+Main Music webpage/player
+
+Created by TerraVoltt 2017+
+
+Changelog:
+12.4.2017 - Page created, inital images + player container added
+12.5.2017 - Audio element added
+-->
+<html>
+<head>
+
+<title>shatteredreams</title> 
+
+<meta charset="utf-8">
+
+<link id="css" rel="stylesheet" type="text/css" href="css/fancy.css" />
+<link id="css2" rel="stylesheet" type="text/css" href="css/oldcss.css" />
+<link id="css3" rel="stylesheet" type="text/css" href="css/music.css" />
+<link rel="icon" type="image/png" href="pictures/banners/shatterdv3.png" />
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/csschange.js"></script>
+<script type="text/javascript" src="js/player_controls.js"></script>
+    
+</head>
+    
+<body onload="detectWidth()" onresize="detectWidth()">
+
+<!-- Albums -->
+<div id="grid_wrapper">
+<img id="atomos" class="album" src="pictures/music_art/atomos.png"  alt="Homepage"/>
+        <div id="atomos_info" class="setlist">
+        <table>
+            <tr>
+                <td>Intro</td>
+            </tr><tr>
+                <td>Fissure</td>
+            </tr><tr>
+                <td>If Then, Not: Digital Mix</td>
+            </tr><tr>
+                <td>This is a Recording</td>
+            </tr><tr>
+                <td>Dystopia Ruins</td>
+            </tr><tr>
+                <td>D.R.D. [The Dystopia Ruins Destroyer]</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="neocore" class="album" src="pictures/music_art/AttackNeoCore.png"  alt="Homepage"/> 
+        <div id="neocore_info" class="setlist">
+        <table>
+            <tr>
+                <td>Skyline</td>
+            </tr><tr>
+                <td>The City</td>
+            </tr><tr>
+                <td>Data Stream</td>
+            </tr><tr>
+                <td>After the Blast</td>
+            </tr><tr>
+                <td>Restart the World</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="blueroseep" class="album" src="pictures/music_art/blueroseep.png"  alt="Homepage"/> 
+        <div id="blueroseep_info" class="setlist">
+        <table>
+            <tr>
+                <td>Fragments of a Dream</td>
+            </tr><tr>
+                <td>Moonlit Memories</td>
+            </tr><tr>
+                <td>Unobtainable</td>
+            </tr><tr>
+                <td>Running Riot</td>
+            </tr><tr>
+                <td>Running Riot [Mix]</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="chaosproject" class="album" src="pictures/music_art/chaos.png"  alt="Homepage"/> 
+        <div id="chaosproject_info" class="setlist">
+        <table>
+            <tr>
+                <td>Digital Entities</td>
+            </tr><tr>
+                <td>If Then, Not</td>
+            </tr><tr>
+                <td>Limits</td>
+            </tr><tr>
+                <td>Space Wyrm</td>
+            </tr><tr>
+                <td>Moonlit Memories</td>
+            </tr><tr>
+                <td>Running Riot</td>
+            </tr><tr>
+                <td>The Void [The End of All]</td>
+            </tr><tr>
+                <td>Resonance</td>
+            </tr><tr>
+                <td>If Then, Not [Otherworld Mix]</td>
+            </tr><tr>
+                <td>Limits [Demo]</td>
+            </tr><tr>
+                <td>Space Wyrm [The Calling Of]</td>
+            </tr><tr>
+                <td>Moonlit Memories [Reverse Mix]</td>
+            </tr><tr>
+                <td>Running Riot [Prototype]</td>
+            </tr><tr>                
+                <td>Eliminate Volume 2 [Prototype]</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="dc1" class="album" src="pictures/music_art/DC.png"  alt="Homepage"/> 
+        <div id="dc1_info" class="setlist">
+        <table>
+            <tr>
+                <td>Monsters [Awakening]</td>
+            </tr><tr>
+                <td>Spiral Saga</td>
+            </tr><tr>
+                <td>Triplax [A Dream Reawoken]</td>
+            </tr><tr>
+                <td>Welcome To Paradise [Tribal Mix]</td>
+            </tr><tr>
+                <td>Andradite Volume 2</td>
+            </tr><tr>
+                <td>Fragments of a Dream Volume 2</td>
+            </tr><tr>
+                <td>Triplax [Prototype]</td>
+            </tr><tr>
+                <td>Monsters [Once Again]</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="dc2" class="album" src="pictures/music_art/dc2.png"  alt="Homepage"/> 
+        <div id="dc2_info" class="setlist">
+        <table>
+            <tr>
+                <td>SD-03</td>
+            </tr><tr>
+                <td>Bitcrushed</td>
+            </tr><tr>
+                <td>Darkness Prevails [Prototype]</td>
+            </tr><tr>
+                <td>Aquatica</td>
+            </tr><tr>
+                <td>Malicious Intent</td>
+            </tr><tr>
+                <td>H://C Present</td>
+            </tr><tr>
+                <td>H://C Future</td>
+            </tr><tr>
+                <td>H://C Super</td>
+            </tr><tr>
+                <td>Endless</td>
+            </tr><tr>
+                <td>Bitcrushed [175 BPM]</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="dc3" class="album" src="pictures/music_art/dc3.png"  alt="Homepage"/>
+        <div id="dc3_info" class="setlist">
+        <table>
+            <tr>
+                <td>iN-RNG</td>
+            </tr><tr>
+                <td>RNG 2017 [Original Mix]</td>
+            </tr><tr>
+                <td>HD:201</td>
+            </tr><tr>
+                <td>Think Again</td>
+            </tr><tr>
+                <td>Decades [iNT-I]</td>
+            </tr><tr>
+                <td>Siren Song</td>
+            </tr><tr>
+                <td>It's The End of The World [So Let's Party!]</td>
+            </tr><tr>
+                <td>Eclipse [HD]</td>
+            </tr><tr>
+                <td>One Heartbeat Away [iNT-II]</td>
+            </tr><tr>
+                <td>Andradite: Hopes And Dreams [HD]</td>
+            </tr><tr>
+                <td>RNG 2017 [HD]</td>
+            </tr><tr>
+                <td>Life, Death, and Revival</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="dh" class="album" src="pictures/music_art/DHs.png"  alt="Homepage"/> 
+        <div id="dh_info" class="setlist">
+        <table>
+            <tr>
+                <td>Year 45XX</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="duolithic" class="album" src="pictures/music_art/duolithic2.png"  alt="Homepage"/> 
+        <div id="duolithic_info" class="setlist">
+        <table>
+            <tr>
+                <td>Crossroads of the Universe</td>
+            </tr><tr>
+                <td>H://C Past</td>
+            </tr><tr>
+                <td>H://C Present</td>
+            </tr><tr>
+                <td>H://C Future</td>
+            </tr><tr>
+                <td>The International Travel Network</td>
+            </tr><tr>
+                <td>Kingdoms [Super]</td>
+            </tr><tr>
+                <td>The Unknown</td>
+            </tr><tr>
+                <td>Awakening of The Core</td>
+            </tr><tr>
+                <td>Attack of The Core</td>
+            </tr><tr>
+                <td>Secrects of The Core</td>
+            </tr><tr>
+                <td>End of The Core</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="hic" class="album" src="pictures/music_art/HIC2018.png"  alt="Homepage"/> 
+        <div id="hic_info" class="setlist">
+        <table>
+            <tr>
+                <td>Digital Entities [Harmony]</td>
+            </tr><tr>
+                <td>Federation</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="p81" class="album" src="pictures/music_art/project81.png"  alt="Homepage"/> 
+        <div id="p81_info" class="setlist">
+        <table>
+            <tr>
+                <td>Ideals of the Spirits 2.0</td>
+            </tr><tr>
+                <td>Journey</td>
+            </tr><tr>
+                <td>Think</td>
+            </tr><tr>
+                <td>Space Dragons</td>
+            </tr><tr>
+                <td>Ideals [Rock]</td>
+            </tr><tr>
+                <td>Destination Unknown</td>
+            </tr><tr>
+                <td>Moonlit Dance Mix</td>
+            </tr><tr>
+                <td>Dark Cavern Dance Mix</td>
+            </tr><tr>
+                <td>Project 81</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="rebirth" class="album" src="pictures/music_art/rebirth.png"  alt="Homepage"/> 
+        <div id="rebirth_info" class="setlist">
+        <table>
+            <tr>
+                <td>Ashes of Light</td>
+            </tr><tr>
+                <td>H:20</td>
+            </tr><tr>
+                <td>Shard of Hallowed Earth</td>
+            </tr><tr>
+                <td>Particles of a Distant Sun</td>
+            </tr><tr>
+                <td>Frozen Cosmos</td>
+            </tr><tr>
+                <td>Elimination of Memories</td>
+            </tr><tr>
+                <td>Eternal Paradise</td>
+            </tr><tr>
+                <td>The Light of Life [Bonus]</td>
+            </tr><tr>
+                <td>Hard 'N Heavy [Bonus]</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="reboot" class="album" src="pictures/music_art/reboot2.png"  alt="Homepage"/> 
+        <div id="reboot_info" class="setlist">
+        <table>
+            <tr>
+                <td>Main Theme</td>
+            </tr><tr>
+                <td>Main Theme [Redux]</td>
+            </tr><tr>
+                <td>Encounter [Basic]</td>
+            </tr><tr>
+                <td>Encounter [Prototype]</td>
+            </tr><tr>
+                <td>Encounter [Redux]</td>
+            </tr><tr>
+                <td>Choices</td>
+            </tr><tr>
+                <td>Choices [Prototype]</td>
+            </tr><tr>
+                <td>Boss Battle [Basic]</td>
+            </tr><tr>
+                <td>Dark Cavern</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="sdep" class="album" src="pictures/music_art/sdep.png"  alt="Homepage"/> 
+        <div id="sdep_info"  class="setlist">
+        <table>
+            <tr>
+                <td>Fragments Of a Dream</td>
+            </tr><tr>
+                <td>Ideals of The Spirits</td>
+            </tr><tr>
+                <td>Elimination of Memories</td>
+            </tr><tr>
+                <td>Run 'N Gun</td>
+            </tr><tr>
+                <td>Visions [of the End]</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="sid" class="album" src="pictures/music_art/sid.png"  alt="Homepage"/> 
+        <div id="sid_info"  class="setlist">
+        <table>
+            <tr>
+                <td>Stars</td>
+            </tr><tr>
+                <td>Brite</td>
+            </tr><tr>
+                <td>Novae</td>
+            </tr><tr>
+                <td>Universe</td>
+            </tr><tr>
+                <td>Dancing Twilight</td>
+            </tr><tr>
+                <td>Undertones</td>
+            </tr><tr>
+                <td>If Then, Not: Remember Us</td>
+            </tr><tr>
+                <td>Space Wyrm: The Eldest</td>
+            </tr><tr>
+                <td>Andradite: Hopes and Dreams</td>
+            </tr><tr>
+                <td>Eclipse [Rock]</td>
+            </tr><tr>
+                <td>Eclipse [Dance]</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="snowraid" class="album" src="pictures/music_art/snowraid2.png"  alt="Homepage"/> 
+        <div id="snowraid_info"  class="setlist">
+        <table>
+            <tr>
+                <td>Resurgence</td>
+            </tr><tr>
+                <td>Starlight</td>
+            </tr><tr>
+                <td>Frozen Wastelands</td>
+            </tr><tr>
+                <td>Soul</td>
+            </tr><tr>
+                <td>Sinewave</td>
+            </tr><tr>
+                <td>Sylloge</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="thefall" class="album" src="pictures/music_art/the_Fall.png"  alt="Homepage"/> 
+        <div id="thefall_info"  class="setlist">
+        <table>
+            <tr>
+                <td>Habitat</td>
+            </tr><tr>
+                <td>Welcome to Paradise</td>
+            </tr><tr>
+                <td>Canyond of Beyond</td>
+            </tr><tr>
+                <td>Factions of War</td>
+            </tr><tr>
+                <td>Spiral Sword</td>
+            </tr><tr>
+                <td>Andradite</td>
+            </tr><tr>
+                <td>Forgotten Fundamentals</td>
+            </tr><tr>
+                <td>Acidify</td>
+            </tr><tr>
+                <td>Human Actualization</td>
+            </tr><tr>
+                <td>Malevolence</td>
+            </tr><tr>
+                <td>The Eye</td>
+            </tr><tr>
+                <td>The End of Space-Time</td>
+            </tr><tr>
+                <td>Horror Stories of Caddyshack Lane [Bonus]</td>
+            </tr><tr>
+                <td>Kingdoms [Bonus]</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="thefall2" class="album" src="pictures/music_art/the_Fall2.png"  alt="Homepage"/> 
+         <div id="thefall2_info"  class="setlist">
+        <table>
+            <tr>
+                <td>Fundamentals</td>
+            </tr><tr>
+                <td>Canyons</td>
+            </tr><tr>
+                <td>Space-Time</td>
+            </tr><tr>
+                <td>Unit 666, Caddyshack Lane</td>
+            </tr><tr>
+                <td>A Broken Mind</td>
+            </tr><tr>
+                <td>The Eye</td>
+            </tr><tr>
+                <td>To War!</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="redacted" class="album" src="pictures/music_art/TRF.png"  alt="Homepage"/> 
+        <div id="redacted_info"  class="setlist">
+        <table>
+            <tr>
+                <td>Snowraid [Part I: Bombshell]</td>
+            </tr><tr>
+                <td>Snowraid [Part II: Loyalty]</td>
+            </tr><tr>
+                <td>Snowraid [Part III: Death]</td>
+            </tr><tr>
+                <td>Snowraid [Part VI: Redemption]</td>
+            </tr><tr>
+                <td>Snowraid [Part V: Ensemble]</td>
+            </tr><tr>
+                <td>Team Up!? Neo Core and Dystopia Destroyer!</td>
+            </tr><tr>
+        </table>
+    </div>
+<img id="vector" class="album" src="pictures/music_art/vector.png"  alt="Homepage"/> 
+        <div id="vector_info"  class="setlist">
+        <table>
+            <tr>
+                <td>Lavandula</td>
+            </tr><tr>
+                <td>Lavandula [Crush]</td>
+            </tr><tr>
+                <td>Lavandula [99F]</td>
+            </tr><tr>
+                <td>The Hand We Were Dealt [Prevail]</td>
+            </tr><tr>
+                <td>The Hand We Were Dealt [Acceptance]</td>
+            </tr><tr>
+                <td>D3 [Dire Dire Docks]</td>
+            </tr><tr>
+                <td>D3 [Dire Dire Docks Mix]</td>
+            </tr><tr>
+                <td>Dance of the Dragons [Lance Battle Theme]</td>
+            </tr><tr>
+                <td>A Nightmare [Nightmare-X]</td>
+            </tr><tr>
+                <td>A Nightmare [Nightmare-X w/ Drums]</td>
+            </tr><tr>
+        </table>
+    </div>
+</div>
+
+<!-- Audio Player -->
+<audio id="music_src">
+    <source src="" type="audio/wav">
+</audio>
+
+<!-- Audio Controls -->    
+<span id="player_containter">
+        <button id="player_playPause"></button>
+        <div id="player_progress_bar">
+            <div id="player_progress_pos"></div>
+        </div>
+        <a href="index.html"><img id="gohome" src="pictures/img_links/back.png" /></a>
+</span>    
+    
+    
+    
+    
+    
+</body>
+</html>

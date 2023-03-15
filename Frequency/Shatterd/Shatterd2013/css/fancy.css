@@ -1,0 +1,203 @@
+/*Main*/
+body{
+font-size: 14px;
+font-family: Calibri, Arial, sans-serif;
+color: #000000;
+background: #FCFCFC url('../pictures/background/frequency.png') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;}
+}
+
+/*Spans Left*/
+
+#ticker{
+width: 300px;
+z-index: 4;
+padding: 7px 7px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+background-color:  rgba(0, 0, 0, 0.5);
+display: block;
+}
+
+#realtime{
+width: 300px;
+z-index: 4;
+padding: 7px 7px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+background-color:  rgba(0, 0, 0, 0.5);
+display: block;
+}
+
+#menubutton{
+display: none;
+}
+
+#button{
+z-index: 4;
+padding: 1px 1px 5px 5px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+display: inline-block;
+}
+
+
+
+
+
+/*Spans Right*/
+#blog{
+z-index: 4;
+width: 300px;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+width: 985px;
+height: 550px;
+color: #FFFFFF;
+text-decoration: none;
+background-color:  rgba(0, 255, 0, 0.25);
+padding: 7px 7px;
+border: 0;
+right: 10px;
+}
+
+/*links*/
+a#menu, a{
+color: #FFFFFF;
+text-decoration: none;}
+
+
+a.link{
+position: block;
+padding: 5px;
+color: #000000;
+text-decoration: none;}
+
+a.link:hover, a:hover{
+color: #AAAAAA;}
+
+
+/*Imagelink*/
+#imglink{
+margin: 5px;
+padding: 3px;
+box-shadow: 0px 2px 5px #000000;
+border-bottom-right-radius: 15px;
+border-top-left-radius: 15px;
+}
+
+#imglink:hover{
+background-color:  rgba(0, 255, 0, 0.25);
+}
+
+
+/*Tooltip*/
+#tooltip{
+position: relative;
+}
+  
+#tooltip span{
+margin-left: -999em;
+position: absolute;
+}
+  
+#tooltip:hover span{ 
+font-family: Calibri, Tahoma, Geneva, sans-serif;
+position: absolute;
+z-index: 99;
+margin-left: 0;
+width: 250px;
+}
+
+#normal{
+color: #000000;
+background-color: rgba(255, 255, 255, 0.75);
+border: solid 1px #969696;
+padding: 10px;
+box-shadow: 0px 0px 5px #D3D3D3;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+#mirror{
+left: -276px;
+color: #000000;
+background-color: rgba(255, 255, 255, 0.75);
+border: solid 1px #969696;
+padding: 10px;
+box-shadow: 0px 0px 5px #D3D3D3;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+#buttons{
+z-index: 3;
+width: 300px;
+padding: 7px 7px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+color: #FFFFFF;
+text-decoration: none;
+background-color: rgba(150, 150, 150, 0.75);
+box-shadow: 0px 2px 5px #000000;
+padding: 7px 7px;
+}
+/*Older/Other styles
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+.innerlink{
+color: #FFFFFF;
+text-decoration: none;}
+
+#buttons{
+z-index: 3;
+width: 300px;
+padding: 7px 7px;
+display: block;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+color: #FFFFFF;
+text-decoration: none;
+background-color: #404040;
+box-shadow: 0px 2px 5px #000000;
+padding: 7px 7px;
+}
+
+#important{
+width: 300px;
+z-index: 5;
+padding: 7px 7px;
+margin-left: auto;
+margin-right: auto;
+background-color: #8ADB57;
+display: block;
+position: absolute;
+box-shadow: 0px 2px 5px #000000;
+font-size: 16px;
+text-transform: uppercase;
+padding: 5px;
+color: #FFFFFF;}
+
+/*Cover background
+background: url('../pictures/background/dark2.jpg') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;}
+*/

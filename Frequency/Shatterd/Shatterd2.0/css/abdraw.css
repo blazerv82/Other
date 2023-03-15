@@ -1,0 +1,18 @@
+body{
+background-color: #101010;
+text-align: center;
+color: #FFFFFF;}
+
+a.menu{
+position: block;
+padding: 15px 15px;
+color: #FFFFFF;
+text-decoration: none;
+background-color: #101010;}
+
+#leftmenu{
+position: fixed;
+left: 5px;}
+
+#playcanvas{
+background-color: #A0A0A0;}

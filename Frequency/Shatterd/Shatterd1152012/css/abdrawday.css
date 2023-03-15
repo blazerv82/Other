@@ -1,0 +1,29 @@
+html, body {
+width:  100%;
+height: 100%;
+margin: 0px;
+}
+
+
+#menu{
+text-decoration: none;
+width: 25%;
+margin-left: auto;
+margin-right: auto;
+padding: 7px 7px;
+background-color: #909090;
+display: block;
+background-image: url('../pictures/background/tabstop.png');
+background-repeat: repeat-x;}
+
+a.menu{
+position: block;
+padding: 15px 15px;
+color: #FFFFFF;
+text-decoration: none;}
+
+#playcanvas{
+position: absolute;
+border: 1px solid black;
+background-color: #A0A0A0;
+background-image: url('../pictures/snake.png');}

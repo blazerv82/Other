@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>VAF V2</title>
+
+    <meta charset="utf-8">
+
+    <link rel="icon" href="img/favicon.png" >
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/new_main.css">
+
+    <script src="js/p5.js"></script>
+    <script src="js/p5.dom.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/anime.min.js"></script>
+
+    <script type="text/javascript" src="js/llama.js"></script>
+    <script type="text/javascript" src="js/setup.js"></script>
+
+</head>
+
+<body onload="setup()">
+
+    <div class="jumbotron">
+
+        <div class="container">
+            <h1 class="display-4">Virtual Animal Farm</h1>
+            <p class="text-light">Take care of your very own animal farm!</p>
+        </div>
+
+    </div>
+
+    <div class="card-deck">
+
+        <div class="card">
+            <div class="card-header">
+                <img id="llama_img" src="img/llama.png">
+                <div id="llama_name"></div>
+            </div>
+            <div class="card-body">    
+                <div id="llama_info"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                HUNGER <span id="llama_hunger"></span>
+            </div>
+            <div class="card-body">
+                <div id="llama_hunger_bar"></div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-outline-light" onclick="feed()">FEED</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                MOOD <span id="llama_happiness"></span>
+            </div>
+            <div class="card-body">
+                <div id="llama_happiness_bar"></div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-outline-light" onclick="play()">PLAY</button>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    
+
+
+</body>
+
+</html>

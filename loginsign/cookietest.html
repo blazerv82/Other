@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>Cookie Test</title>
+
+<script text="type/javascript">
+
+function newCookie(){
+
+var name = document.getElementById('name').value;
+var value = document.getElementById('value').value;
+var lasts = document.getElementById('lasts').value;
+
+if (!name || !value){
+alert("One (or more) of the fields are blank. Check again.");}
+
+if (!lasts){
+lasts = "";}
+
+document.cookie = name + "=" + value + "; expires=" + lasts;
+
+}
+
+function readCookie(){
+
+alert(document.cookie);
+
+}
+
+
+</script>
+
+</head>
+<body>
+
+
+
+<table border="3">
+
+<tr>
+<td>Name</td> 
+<td><input type="text" id="name" /></td>
+</tr>
+
+<tr>
+<td>Value</td>
+<td><input type="text" id="value" /></td>
+</tr>
+
+<tr>
+<td>Lasts For:</td>
+<td><input type="text" id="lasts" /></td>
+</tr>
+
+<tr>
+<td><button onclick="newCookie(name, value)">Add Cookie</button></td>
+<td><button onclick="readCookie()">Read Cookie(s)</button></td>
+</tr>

@@ -1,0 +1,37 @@
+/* Basics */
+body{
+    font-family: Calibri, Arial, sans-serif;
+    background-color: rgb(240, 240, 240);
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    overflow: hidden; 
+    display: block;
+    margin: 10px;
+}
+
+/* Card */
+.card-deck {
+    margin: 10px 10px;
+}
+
+.card {
+    background-color: rgb(70, 70, 70);
+    color: rgb(255, 255, 255);
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(99, 29, 139);
+}
+
+.nav-item, .nav-link, .navbar-brand {
+    color: rgb(255, 255, 255);
+}
+
+.nav-item:hover, .nav-link:hover, .navbar-brand:hover{
+    color: rgb(190, 190, 190);
+}
+
+#world_container{
+    background-color: rgb(255, 255, 255);
+}

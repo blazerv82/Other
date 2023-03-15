@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Tasky</title> 
+
+    <meta charset="utf-8">    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Anonymous+Pro" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/aff_core.css">
+
+</head>
+
+<body class="theme-light">
+
+    <div class="nav-container">
+        <a class="nav-item" href="index.php">New</a>
+        <a class="nav-item" href="view.php">View</a>
+    </div>
+
+    <div class="header-container">
+        Tasky
+    </div>
+
+    <div class="container">

@@ -1,0 +1,43 @@
+/* Main */
+body{
+font-size: 14px;
+font-family: Calibri, Arial, sans-serif;
+background-color: #101010;
+text-align: center;
+color: #FFFFFF;
+background: url('../pictures/background/mobile.png') repeat;
+}
+
+/* Spans Left */
+
+#realtime{
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+width: 300px;
+padding: 5px 5px;
+color: rgba(255, 255, 255, 1);
+text-decoration: none;
+background-color:  rgba(0, 150, 0, 0.25);
+}
+
+/* Image links */
+
+.imgheader{
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding-bottom: 5px;
+width: 100%;
+color: #FFFFFF;
+text-decoration: none;
+background-color:  rgba(0, 255, 0, 0.25);
+}
+
+.imgheader_link{
+display: block;
+margin-left: auto;
+margin-right: auto;
+background-color:  rgba(0, 150, 0, 0.25);
+}
